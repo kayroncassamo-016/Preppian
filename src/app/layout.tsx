@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Sora,Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "./header/NavBar";
+import NavBar from "./components/landing-page/header/NavBar";
 import { Inter } from "next/font/google";
-import { HeaderAnnouncement } from "./header/HeaderAnnouncement";
-import { HowItWorks } from "./howItWorks/howItWorks";
+import { HeaderAnnouncement } from "./components/landing-page/header/HeaderAnnouncement";
+import { HowItWorks } from "./components/landing-page/howItWorks/HowItWorks";
 
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
+
+const sora = Sora({
+  variable: "--font-sora",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 
 
 
@@ -41,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${sora.variable} h-full antialiased`}
     >
       <body>
         <div className="flex flex-col">

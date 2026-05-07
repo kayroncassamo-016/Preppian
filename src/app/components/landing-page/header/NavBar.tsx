@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Logo } from "../assets/Logo";
+import { Logo } from "../../../assets/Logo";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 
@@ -115,7 +115,7 @@ const [open,setOpen] = useState(false);
                     Pricing
                 </Link>
 
-                <Link href="#pricing" className="px-2
+                <Link href="#testimonials" className="px-2
                 hover:text-gray-700 transition-colors">
                     Results
                 </Link>
