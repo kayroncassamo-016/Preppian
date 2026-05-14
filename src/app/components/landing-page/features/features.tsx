@@ -55,7 +55,7 @@ const features =
 
    {
     badgeContent:"Progress",
-     badgeBackground: 'bg-red-100 text-red-800"',
+     badgeBackground: 'bg-red-100 text-red-800',
     icon: TrendingUp,
     iconColor: '#991B1B',
     label:'avarage improvement in 2 weeks',
@@ -84,9 +84,9 @@ const features =
     description: "You never see what you said forcing you to perform under real pressure, just like the actual interview.",
   },
 ]
-
+//  <section className="bg-[#f3f3f3] flex flex-col pb-20 " - antes
 return (
-    <section className="bg-[#f3f3f3] flex flex-col pb-20 "
+    <section className="bg-[#1f1f1e] flex flex-col pb-20 "
     id = "features">
         
         <motion.div className="flex flex-col items-center"
@@ -97,11 +97,11 @@ return (
          transition ={{duration:0.6, delay:0.2}}>
         
             <span className="text-[#d97757] block text-center
-            font-bold text-sm pt-2 tracking-widest">
+            font-bold text-sm pt-2 tracking-widest py-5">
                 FEATURES
             </span>
 
-            <h1 className="sm:text-4xl text-2xl text-gray-700 font-bold
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-bold
             w-full max-w-xl mx-auto text-center md:max-w-3xl px-4">
             
             Everything you need to know to ace your 
@@ -126,10 +126,10 @@ return (
                     transition={{delay:index*0.1}}
                     className="">
                     
-                    <Card className="border border-white shadow-sm hover:shadow-md
+                    <Card className="shadow-sm hover:shadow-md
                     transition-shadow duration-300 ease-out
-                     hover:border-main-color/80 h-full
-                    w-full max-w-sm">
+                     hover:border-main-color/80 h-full bg-white/10
+                     ">
                         <CardTitle className="flex justify-between px-4
                         items-center">
                             <Badge
@@ -137,20 +137,20 @@ return (
                                 {feature.badgeContent}
                             </Badge>
                             <Icon
-                            className="bg-accent rounded-md p-2 shrink-0 w-10 h-10"
+                            className="bg-accent rounded-md p-2 shrink-0 w-8 h-8"
                             color={feature.iconColor}/>
                         </CardTitle>
 
                         <CardContent>
                             <div>
-                                <h1 className = "text-3xl font-bold text-gray-700 tracking-widest">
+                                <h1 className = "text-3xl font-bold text-white tracking-widest">
                                     {feature.title}
                                 </h1>
-                                <span className="text-md text-gray-400
+                                <span className="text-md text-white/70
                                 tracking-widest">{feature.label}</span><br/><br/>
                             </div>
-                            <Separator/> 
-                            <div className ="font-normal text-gray-500 pt-2">
+                            <div className="h-px bg-white/8"/>
+                            <div className ="font-normal text-white/70 pt-2">
                                 <p className="font-semibold">{feature.subtitle}</p>
                                 <p className="tracking-wide">{feature.description}</p>
                             </div>

@@ -86,61 +86,7 @@ const testimonials = [
       "Prep AI was very useful in preparing for my interviews.",
   },
 ];
-// export const Testimonials = () => {
-//   const loopItems = [...testimonials, ...testimonials];
 
-//   const ref = useRef<HTMLDivElement | null>(null);
-//   const [width, setWidth] = useState(0);
-
-//   useEffect(() => {
-//     if (ref.current) {
-//       setWidth(ref.current.scrollWidth / 2);
-//     }
-//   }, []);
-
-  
-//   return (
-//     <div className="overflow-hidden py-10">
-//       <motion.div
-//         ref={ref}
-//         className="flex gap-6 pr-6"
-//         animate={{ x: -width }} // 🔥 USANDO PX (FIX REAL)
-//         transition={{
-//           repeat: Infinity,
-//           duration: 20,
-//           ease: "linear",
-//         }}
-//         style={{ willChange: "transform" }}
-//       >
-//         {loopItems.map((t, i) => (
-//           <div
-//             key={i}
-//             className="min-w-[320px] max-w-[320px] bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-5"
-//           >
-//             <div className="flex items-center gap-3 mb-3">
-//               <img
-//                 src={t.user.avatar}
-//                 className="w-10 h-10 rounded-full"
-//               />
-//               <div>
-//                 <p className="text-sm font-semibold">{t.user.name}</p>
-//                 <p className="text-xs opacity-70">{t.title}</p>
-//               </div>
-//             </div>
-
-//             <div className="text-yellow-400 mb-2">
-//               {"★".repeat(t.rating)}
-//               {"☆".repeat(5 - t.rating)}
-//             </div>
-
-//             <p className="text-sm opacity-80">{t.content}</p>
-//           </div>
-//         ))}
-//       </motion.div>
-//     </div>
-//   );
-// };
-// }
 
 export const Testimonials = () => {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -157,13 +103,15 @@ export const Testimonials = () => {
   }, []);
 
   return (
+
+    <section id="testimonials">
     <div className="overflow-hidden w-full">
       <span className="block text-center tracking-widest 
-      text-main-color font-bold  pt-4 text-sm">
+      text-main-color font-bold  mb-5 text-sm">
         TESTIMONIALS
       </span>
-      <div className="mb-15">
-        <h1 className="text-center font-bold text-gray-700 text-4xl">
+      <div className="mb-5">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-bold text-white">
           They practiced. They got <span className="text-main-color">hired</span>
         </h1>
       </div>
@@ -184,19 +132,19 @@ export const Testimonials = () => {
         {loopItems.map((t, i) => (
           <div
             key={i}
-            className="min-w-[320px] max-w-[320px] bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-5"
+            className="min-w-[320px] max-w-[320px] bg-white/10 backdrop-blur-lg border border-white/10 rounded-xl p-5"
           >
             <div className="flex items-center gap-3 mb-3">
               <img src={t.user.avatar} className="w-10 h-10 rounded-full" />
               <div>
-                <p className="text-sm font-semibold">{t.user.name}</p>
-                <p className="text-xs opacity-70">{t.title}</p>
+                <p className="text-sm font-semibold text-white">{t.user.name}</p>
+                <p className="text-xs opacity-70 text-white/70">{t.title}</p>
               </div>
             </div>
             <div className="text-yellow-400 mb-2">
               {"★".repeat(t.rating)}{"☆".repeat(5 - t.rating)}
             </div>
-            <p className="text-sm opacity-80">{t.content}</p>
+            <p className="text-sm opacity-80 text-white/70">{t.content}</p>
           </div>
         ))}
       </div>
@@ -208,5 +156,10 @@ export const Testimonials = () => {
         }
       `}</style>
     </div>
+
+    </section>
   );
+
 };
+
+

@@ -84,7 +84,7 @@ const _steps =
 
 
     return (
-        <section className="mt-10 w-full bg-[#f3f3f3] pb-20
+        <section className="mt-10 w-full bg-[#1f1f1e] pb-20
         "id="how-it-works">
 
             {/* <motion.div className="flex flex-col pt-4" 
@@ -168,17 +168,20 @@ const _steps =
                     HOW IT WORKS
         </span>
 
-        <h1 className="font-bold text-2xl sm:text-4xl text-gray-700
+        <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white
           text-center w-full max-w-xl lg:max-w-5xl mx-auto px-4 mb-2">
             From nervous wreck to <span className="text-[#d97757]">offer-ready  </span> 
             {"   "} in 4 steps
         </h1>
         
-        <div className="flex flex-row md:flex-col lg:flex-col px-10">
-        <div>
+        
+        <div className=" md:px-30 lg:px-1">
+        <div className="flex flex-row lg:flex-col px-10 
+        mx-auto w-full max-w-5xl text-center">
+        <div className="">
         <div className="flex flex-col items-start justify-center 
-        md:flex-row   md:items-center
-        max-w-3xl mx-auto">
+        lg:flex-row   lg:items-center
+        max-w-3xl mx-auto ">
         
         {_steps.map((step, i) => (
             <Fragment key={i}>
@@ -193,10 +196,10 @@ const _steps =
             {i !== 3 && (
                 // <div className="flex-1 md:h-px bg-gray-300 mx-2" />
                  <div className="
-                  bg-gray-300
+                  bg-white/10
                     w-px h-17
-                    sm:h-15
-                    md:h-px md:w-full
+                    sm:h-14
+                    lg:h-px lg:w-full
                     mx-2
                 " />
             )}
@@ -206,14 +209,14 @@ const _steps =
         </div>
         
        
-        <div className="w-full max-w-4xl mx-auto">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+        <div className="w-full max-w-4xl mx-auto text-white/70">
+        <div className="grid grid-cols-1 gap-7 lg:grid-cols-4">
             
             {_steps.map((step, index) => {
             const Icon = step.icon
             return (
-            <motion.div key={index} className="text-sm text-gray-700 
-           flex flex-col items-center text-center w-full max-w-2xl"
+            <motion.div key={index} className="text-sm
+           flex flex-col items-center text-center w-full max-w-xl"
             initial={{opacity:0,y:20}}
             whileInView={{opacity:1,y:0}}
             viewport={{once:true}}
@@ -222,12 +225,16 @@ const _steps =
                
                 <div className="mt-2 font-bold flex flex-row">
                     
-                    <Icon className="w-5 h-5"
+                    <Icon className="w-5 h-5 pr-1"
                     color={"#d97757"}/> 
                    <p>{step.title}</p> 
                 </div>
+            {/* leading-normal  - espacado
+            leading-relaxed  - mais espacado
+            leading-loose  - mais espacad
 
-                <div>
+            */}
+                <div className="lg:text-sm leading-normal lg:leading-loose">
                     {step.description}
                 </div>
                 
@@ -240,64 +247,8 @@ const _steps =
         </div>
         </div>
         </div>
-        
-
-{/* 
-<div>
-  <span className="text-sm block text-center text-main-color font-bold tracking-widest py-5">
-    HOW IT WORKS
-  </span>
-
-  <h1 className="font-bold text-2xl sm:text-4xl text-gray-700 text-center max-w-4xl mx-auto px-4 mb-10">
-    From nervous wreck to <span className="text-[#d97757]">offer-ready</span> in 4 steps
-  </h1>
-
-  <div className="flex flex-col gap-10 max-w-3xl mx-auto px-4">
-
-    {_steps.map((step, i) => {
-      const Icon = step.icon
-
-      return (
-        <div key={i} className="flex items-start gap-4">
-
-       
-          <div className="flex flex-col items-center">
-
-          
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium
-              ${step.step === 1 
-                ? "bg-main-color text-white" 
-                : "border border-gray-300 text-gray-500"}
-            `}>
-              {step.step}
-            </div>
-
-         
-            {i !== _steps.length - 1 && (
-           <div className="w-px flex-1 bg-gray-200 my-2"></div>
-            )}
-          </div>
-
-    
-          <div className="flex-1">
-
-            <div className="flex items-center gap-2 font-bold text-gray-800">
-              <Icon className="w-5 h-5 text-[#d97757]" />
-              {step.title}
-            </div>
-
-            <p className="text-gray-600 text-sm">
-              {step.description}
-            </p>
-
-          </div>
-
         </div>
-      )
-    })}
-
-  </div>
-</div> */}
+        
          
 </section>
     )

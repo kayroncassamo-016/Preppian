@@ -21,7 +21,7 @@ const [open,setOpen] = useState(false);
     return (
         <header className="flex justify-between
         items-center lg:justify-start
-        border-b border-gray-100 p-4 ">
+        bg-[#1f1f1e] p-4 border-b border-white/5">
 
         <div className="flex items-center justify-center">
           <div className="lg:hidden">
@@ -43,12 +43,11 @@ const [open,setOpen] = useState(false);
                             <Logo />
                         </SheetTitle>
                         <nav className="flex flex-col
-                        ml-2 flex-1 text-md
-                         font-semibold
+                        ml-2 flex-1 text-md font-semibold
                         ">
                             <Link href="#how-it-works"
                             className="p-2 hover:bg-accent
-                            transition-colors
+                             text-main-color
                             ">How It Works
                             </Link>
                             <Link href="#features" className="p-2
@@ -61,7 +60,7 @@ const [open,setOpen] = useState(false);
                                 Pricing
                             </Link>
 
-                            <Link href="#pricing" className="p-2
+                            <Link href="#testimonials" className="p-2
                             hover:bg-accent transition-colors">
                                 Results
                             </Link>
@@ -90,15 +89,15 @@ const [open,setOpen] = useState(false);
           lg:ml-9">
                    <Logo />
                 <span className="font-bold
-                text-gray-700 text-lg ml-2 
-                tracking-wider">
+                text-white/70 ml-2 
+                tracking-wider text-sm md:text-lg">
                     Preppian
                 </span>
             </Link>
         </div>
 
             <nav className="hidden lg:flex ml-2 flex-1 items-center
-            justify-center font-semibold text-gray-500
+            justify-center font-semibold text-white/70 text-sm
             ">
                 <Link href="#how-it-works"
                 className="px-2 hover:text-gray-700 
@@ -127,7 +126,6 @@ const [open,setOpen] = useState(false);
                 <Link href="/subscribe" className="
                 flex justify-center">
                     <Button className="rounded-full px-5
-                    bg-foreground 
                     text-background hover:bg-foreground/80">
                         Log in
                     </Button>
