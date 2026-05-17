@@ -3,7 +3,7 @@ import Home from "./Home/page";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="bg-[#1f1f1e] " >
       <Home />
     </div>
   );

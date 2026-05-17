@@ -10,7 +10,7 @@ export function HeaderAnnouncement()
          bg-[#1f1f1e] text-sm pb-2
          text-white/70 px-4 gap-2 border-b border-white/5'>
             <span className='text-main-color font-bold mt-3 mr-2
-            bg-main-color/30 rounded-full px-2 py-1 text-xs'>
+            bg-main-color/30 rounded-full px-2 py-1 text-xs badge-pulse'>
                 NEW
             </span>
             {/* <span 

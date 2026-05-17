@@ -90,7 +90,9 @@ export function PressSection() {
           initial={{ opacity: 0, y: 12 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-          className="flex flex-row items-center justify-center gap-x-15 gap-y-6"
+          className="lg:flex lg:flex-row lg:items-center lg:justify-center gap-x-15 gap-y-6 
+           grid grid-cols-3 md:pl-15 sm:pl-10 pl-2
+          "
         >
           {pressLogos.map((logo, i) => (
             <motion.div

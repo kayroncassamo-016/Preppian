@@ -301,7 +301,8 @@ export function PricingSection() {
 
             {plan.features.map((feature) => (
               <li key={feature} className="flex gap-2 text-white/70 text-sm">
-                <span className="text-[#34d9b5]">✓</span> {feature}
+                <span className="text-[#34d9b5]">✓</span> 
+                {feature}
               </li>
             ))}
 

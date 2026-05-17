@@ -160,5 +160,18 @@
     /* font-family: var(--font-sora), system-ui, sans-serif; */
   }
 
+  @keyframes badge-pulse {
+  0%, 100% { opacity: 1; 
+    box-shadow: 0 0 12px rgba(217, 119, 87, 0.8);
+  }
+  50% { opacity: 0.75; 
+    box-shadow: 0 0 4px rgba(217, 119, 87, 0.3);
+  }
+}
+
+.badge-pulse {
+  animation: badge-pulse 1.8s ease-in-out infinite;
+}
+
   
 }

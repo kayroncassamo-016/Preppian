@@ -51,7 +51,7 @@ export default function RootLayout({
       className={`${inter.variable} ${sora.variable} h-full antialiased`}
     >
       <body>
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-[#1f1f1e] ">
 
          <HeaderAnnouncement />
           <NavBar />
@@ -61,8 +61,6 @@ export default function RootLayout({
             <div>
               {children} 
             </div>
-
-            
             
           </main>
 

@@ -100,22 +100,21 @@ const [open,setOpen] = useState(false);
             justify-center font-semibold text-white/70 text-sm
             ">
                 <Link href="#how-it-works"
-                className="px-2 hover:text-gray-700 
-                transition-colors
+                className="px-2 hover:text-white transition-colors
                 ">How It Works
                 </Link>
                 <Link href="#features" className="px-2
-                hover:text-gray-700 transition-colors">
+                hover:text-white transition-colors">
                     Features
                 </Link>
 
                  <Link href="#pricing" className="px-2
-                hover:text-gray-700 transition-colors">
+                hover:text-white transition-colors">
                     Pricing
                 </Link>
 
                 <Link href="#testimonials" className="px-2
-                hover:text-gray-700 transition-colors">
+                hover:text-white transition-colors">
                     Results
                 </Link>
 

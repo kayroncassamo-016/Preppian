@@ -96,7 +96,7 @@ export function MyPricing()
                     Pay per use. <span className="text-main-color">No subscriptions</span>
                 </h1>
                 <span className="leading-normal text-white/70 text-center block
-                w-full max-w-3xl mx-auto my-5">
+                w-full max-w-3xl mx-auto my-5 px-2">
                     You only need 
                     interviews a few times in your life -
                     so why pay monthly? Buy a pack, use it when you need it.
@@ -105,7 +105,7 @@ export function MyPricing()
 
             {/* CARDS */}
             
-            <motion.div className="grid grid-cols-1 md:grid-cols-4 gap-6"
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
              initial ={{opacity:0,y:10}}
              whileInView={{opacity:1, y:0}}
              viewport={{once:true}}
