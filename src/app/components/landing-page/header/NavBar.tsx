@@ -13,15 +13,25 @@ import { DropdownMenu, DropdownMenuContent
 import { Sheet, SheetContent, SheetFooter, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { LoginDialog } from "../login/Login";
+import { MyLoginDialog } from "../login/MyLogin";
 
 export default function NavBar()
 {
 const [open,setOpen] = useState(false);
+const [openLoginDialog, setOpenLoginDialog] = useState(false);
 
     return (
         <header className="flex justify-between
         items-center lg:justify-start
         bg-[#1f1f1e] p-4 border-b border-white/5">
+
+    {/* <LoginDialog
+        open={openLoginDialog}
+        setOpen={setOpenLoginDialog}
+    /> */}
+
+    <MyLoginDialog open={openLoginDialog} onClose={()=>setOpenLoginDialog(false)}/>
 
         <div className="flex items-center justify-center">
           <div className="lg:hidden">
@@ -122,21 +132,24 @@ const [open,setOpen] = useState(false);
             </nav>
 
             <div className="flex ">
-                <Link href="/subscribe" className="
+                <Link href="" className="
                 flex justify-center">
                     <Button className="rounded-full px-5
-                    text-background hover:bg-foreground/80">
+                    text-background hover:bg-foreground/80"
+                    onClick={()=>setOpenLoginDialog(true)}>
+
                         Log in
                     </Button>
                 </Link>
 
-                <Link href="/subscribe" className="mx-2
+                <Link href="" className="mx-2
                 flex justify-center">
                     <Button className="rounded-full px-5
                     bg-background
                     text-foreground
                     hover:bg-accent"
-                    variant="outline">
+                    variant="outline"
+                    onClick={()=>setOpenLoginDialog(true)}>
                         Sign up
                     </Button>
                 </Link>

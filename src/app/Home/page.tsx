@@ -12,6 +12,7 @@ import { AppStats } from "../components/landing-page/presection/AppStats";
 import { PricingSection } from "../components/landing-page/pricing/Pricing";
 import { MyPricing } from "../components/landing-page/pricing/MyPricing";
 import { Footer } from "../components/landing-page/footer/Footer";
+import { useState } from "react";
 
 export default function Home()
 {
@@ -24,6 +25,8 @@ export default function Home()
 ];
 
 const companies = ["Google", "Meta", "Stripe", "Notion", "Figma", "Airbnb", "OpenAI", "Linear"];
+
+
 
     return (
         <section className="bg-[#1f1f1e] ">
@@ -169,7 +172,9 @@ const companies = ["Google", "Meta", "Stripe", "Notion", "Figma", "Airbnb", "Ope
             <div className="mb-5">
               <Footer/>
             </div>
-             
+
+            
+
         </section>
     )
 }
