@@ -85,7 +85,7 @@ export function MyPricing()
 
 
     return (
-        <section className ="bg-[##1f1f1e] p-5">
+        <section className ="bg-[##1f1f1e] p-5" id="pricing" >
             <span className="block text-center uppercase tracking-widest
             text-main-color font-semibold">
                 Pricing
